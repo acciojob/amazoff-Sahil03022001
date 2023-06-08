@@ -126,9 +126,9 @@ public class OrderRepository {
             }
         }
 
-        orderToWhichDeliveryPartnerDb.remove(orderIdToDel);
         deliveryPartnerDb.remove(partnerId);
-        if(deliveryPartnerOrdersListDb.containsKey(partnerId)) {
+        if(!orderIdToDel.isBlank()) {
+            orderToWhichDeliveryPartnerDb.remove(orderIdToDel);
             deliveryPartnerOrdersListDb.remove(partnerId);
         }
     }
