@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Repository
 public class OrderRepository {
 
     HashMap<String, Order> orderDb = new HashMap<>();
